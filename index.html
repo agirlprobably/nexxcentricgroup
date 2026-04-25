@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nexxcentric Group</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:#ffffff;color:#1a1a1a;font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.8s ease,transform 0.8s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.d1{transition-delay:0.1s;}.d2{transition-delay:0.2s;}.d3{transition-delay:0.3s;}.d4{transition-delay:0.4s;}
+
+/* NAV */
+.nav-link:hover{color:#1a1a1a !important;}
+.mobile-nav{display:none;}
+
+/* CARDS */
+.company-card{transition:background 0.3s,border-color 0.3s,transform 0.3s;}
+.company-card:hover{background:#f5f3ef !important;border-color:rgba(26,77,53,0.2) !important;transform:translateY(-2px);}
+.company-card::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;transition:width 0.4s ease;}
+.company-card:hover::after{width:100%;}
+.card-nx::after{background:#1a4d35;}
+.card-dp::after{background:#c9a84c;}
+.card-is::after{background:#1a1a1a;}
+.card-cb::after{background:#1a4d35;}
+.company-card:hover .card-arrow{transform:translateX(4px);}
+.card-arrow{transition:transform 0.25s;}
+
+/* BUTTONS */
+.btn-primary:hover{background:#1a4d35 !important;color:#ffffff !important;}
+.btn-outline:hover{background:#1a1a1a !important;color:#ffffff !important;}
+
+/* FOOTER LINKS */
+.footer-link:hover{color:#c9a84c !important;}
+.footer-nav-link:hover{color:#ffffff !important;}
+
+@media(max-width:900px){
+  .desktop-nav{display:none !important;}
+  .hero-title{font-size:clamp(44px,12vw,80px) !important;}
+  .hero-inner{padding:100px 24px 60px !important;}
+  .companies-inner{padding:60px 24px !important;}
+  .cards-grid{grid-template-columns:1fr !important;}
+  .about-grid{grid-template-columns:1fr !important;padding:60px 24px !important;}
+  .vision-inner{padding:80px 24px !important;}
+  .contact-grid{grid-template-columns:1fr !important;padding:60px 24px !important;}
+  .footer-inner{flex-direction:column !important;gap:24px !important;padding:40px 24px !important;text-align:center !important;}
+  .footer-nav{flex-wrap:wrap !important;justify-content:center !important;}
+  .section-header{flex-direction:column !important;align-items:flex-start !important;gap:8px !important;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav style="position:fixed;top:0;left:0;right:0;z-index:100;padding:0 60px;height:72px;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.96);border-bottom:1px solid rgba(0,0,0,0.06);backdrop-filter:blur(12px);">
+  <a href="index.html" style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:17px;letter-spacing:0.1em;text-transform:uppercase;color:#1a1a1a;text-decoration:none;">Nexxcentric<span style="color:#1a4d35;">.</span>Group</a>
+  <ul class="desktop-nav" style="display:flex;align-items:center;gap:40px;list-style:none;">
+    <li><a href="#companies" class="nav-link" style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8a8780;text-decoration:none;transition:color 0.2s;">Companies</a></li>
+    <li><a href="about.html" class="nav-link" style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8a8780;text-decoration:none;transition:color 0.2s;">About</a></li>
+    <li><a href="contact.html" class="nav-link" style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8a8780;text-decoration:none;transition:color 0.2s;">Contact</a></li>
+    <li><a href="contact.html" class="btn-primary" style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#ffffff;background:#1a1a1a;padding:10px 22px;text-decoration:none;transition:background 0.25s,color 0.25s;">Get in Touch</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section style="background:#ffffff;position:relative;overflow:hidden;">
+  <!-- Subtle grid texture -->
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(26,77,53,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(26,77,53,0.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;"></div>
+  <!-- Gold accent line top -->
+  <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,#1a4d35,#c9a84c,#1a4d35);"></div>
+
+  <div class="hero-inner" style="max-width:1200px;margin:0 auto;padding:160px 60px 120px;position:relative;">
+    <div style="display:grid;grid-template-columns:1fr 420px;gap:80px;align-items:center;">
+      <div>
+        <p style="font-size:11px;letter-spacing:0.24em;text-transform:uppercase;color:#1a4d35;margin-bottom:28px;opacity:0;animation:fadeUp 0.7s ease 0.2s forwards;">Est. Jamaica · Building Brands</p>
+        <h1 class="hero-title" style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-size:clamp(52px,7vw,96px);line-height:0.92;letter-spacing:-0.02em;color:#1a1a1a;margin-bottom:36px;opacity:0;animation:fadeUp 0.9s ease 0.35s forwards;">One group.<br><em style="font-style:italic;color:#1a4d35;">Many<br>futures.</em></h1>
+        <p style="font-size:16px;line-height:1.8;color:#8a8780;max-width:420px;margin-bottom:48px;opacity:0;animation:fadeUp 0.8s ease 0.55s forwards;">A Jamaican holding company building a portfolio of brands across strategy, retail, fashion, and beauty. Built for the Caribbean and beyond.</p>
+        <div style="display:flex;gap:16px;opacity:0;animation:fadeUp 0.7s ease 0.7s forwards;">
+          <a href="#companies" class="btn-primary" style="display:inline-flex;align-items:center;gap:10px;padding:16px 32px;background:#1a4d35;color:#ffffff;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;transition:background 0.25s,color 0.25s;">Our Companies <span>→</span></a>
+          <a href="about.html" class="btn-outline" style="display:inline-flex;align-items:center;gap:10px;padding:16px 32px;border:1px solid rgba(0,0,0,0.15);color:#1a1a1a;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;transition:background 0.25s,color 0.25s;">About the Group</a>
+        </div>
+      </div>
+      <!-- Right panel -->
+      <div style="opacity:0;animation:fadeIn 1s ease 0.8s forwards;">
+        <div style="background:#1a4d35;padding:48px 40px;position:relative;overflow:hidden;">
+          <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,rgba(255,255,255,0.2),#c9a84c,rgba(255,255,255,0.2));"></div>
+          <p style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#8a8780;margin-bottom:32px;">Portfolio at a glance</p>
+          <div style="display:flex;flex-direction:column;gap:20px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,0.06);">
+              <div>
+                <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;font-weight:400;color:#fafaf8;margin-bottom:3px;">Nexxcentric</p>
+                <p style="font-size:11px;color:#8a8780;letter-spacing:0.08em;">Strategy &amp; Digital Agency</p>
+              </div>
+              <span style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#1a4d35;border:1px solid #1a4d35;padding:3px 8px;">Active</span>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,0.06);">
+              <div>
+                <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;font-weight:400;color:#fafaf8;margin-bottom:3px;">DEPVIA</p>
+                <p style="font-size:11px;color:#8a8780;letter-spacing:0.08em;">Lifestyle Retail Marketplace</p>
+              </div>
+              <span style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#c9a84c;border:1px solid #c9a84c;padding:3px 8px;">In Dev</span>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,0.06);">
+              <div>
+                <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;font-weight:400;color:#fafaf8;margin-bottom:3px;">I-Squared</p>
+                <p style="font-size:11px;color:#8a8780;letter-spacing:0.08em;">Fashion Brand</p>
+              </div>
+              <span style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#8a8780;border:1px solid #8a8780;padding:3px 8px;">FW 2026</span>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <div>
+                <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;font-weight:400;color:#fafaf8;margin-bottom:3px;">Coilab Beauty</p>
+                <p style="font-size:11px;color:#8a8780;letter-spacing:0.08em;">Hair Salon &amp; Beauty Products</p>
+              </div>
+              <span style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#1a4d35;border:1px solid #1a4d35;padding:3px 8px;">Active</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div style="height:1px;background:linear-gradient(to right,transparent,rgba(0,0,0,0.08),transparent);margin:0 60px;"></div>
+
+<!-- COMPANIES -->
+<section id="companies" style="background:#ffffff;">
+  <div class="companies-inner" style="max-width:1200px;margin:0 auto;padding:100px 60px;">
+
+    <div class="section-header reveal" style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:64px;">
+      <div>
+        <p style="font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:#1a4d35;margin-bottom:14px;">Portfolio</p>
+        <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-size:52px;line-height:1;color:#1a1a1a;">Our <em style="font-style:italic;color:#1a4d35;">companies</em></h2>
+      </div>
+      <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:72px;font-weight:300;color:rgba(0,0,0,0.06);line-height:1;">04</p>
+    </div>
+
+    <div class="cards-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(0,0,0,0.06);">
+
+      <!-- Nexxcentric -->
+      <div class="company-card card-nx reveal d1" onclick="window.open('https://nexxcentric.com','_blank')" style="background:#ffffff;padding:48px 44px;display:flex;flex-direction:column;gap:24px;position:relative;overflow:hidden;cursor:pointer;">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;">
+          <span style="font-size:11px;letter-spacing:0.16em;color:rgba(0,0,0,0.2);">01</span>
+          <span style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;padding:4px 10px;border:1px solid #1a4d35;color:#1a4d35;">Active</span>
+        </div>
+        <div>
+          <p style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#1a4d35;margin-bottom:10px;">Strategy &amp; Digital Agency</p>
+          <h3 style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:38px;line-height:1;color:#1a1a1a;">Nexxcentric</h3>
+        </div>
+        <p style="font-size:14px;line-height:1.8;color:#8a8780;padding-top:20px;border-top:1px solid rgba(0,0,0,0.06);">The agency behind the group. Strategic branding and digital partner for founders and growing businesses — brand identity, web, marketing, social, and AI-augmented systems.</p>
+        <div style="display:flex;align-items:center;gap:8px;margin-top:auto;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(0,0,0,0.3);" class="card-arrow-wrap">Visit Nexxcentric <span class="card-arrow">→</span></div>
+      </div>
+
+      <!-- DEPVIA -->
+      <div class="company-card card-dp reveal d2" onclick="window.open('https://shopdepvia.com','_blank')" style="background:#ffffff;padding:48px 44px;display:flex;flex-direction:column;gap:24px;position:relative;overflow:hidden;cursor:pointer;">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;">
+          <span style="font-size:11px;letter-spacing:0.16em;color:rgba(0,0,0,0.2);">02</span>
+          <span style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;padding:4px 10px;border:1px solid #c9a84c;color:#c9a84c;">In Development</span>
+        </div>
+        <div>
+          <p style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#c9a84c;margin-bottom:10px;">Lifestyle Retail Marketplace</p>
+          <h3 style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:38px;line-height:1;color:#1a1a1a;">DEPVIA</h3>
+        </div>
+        <p style="font-size:14px;line-height:1.8;color:#8a8780;padding-top:20px;border-top:1px solid rgba(0,0,0,0.06);">A curated lifestyle retail marketplace for Jamaica and the wider Caribbean — bringing together beauty, wellness, and lifestyle brands the region deserves. Think Sephora and Ulta, built for here.</p>
+        <div style="display:flex;align-items:center;gap:8px;margin-top:auto;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(0,0,0,0.3);">Learn more <span class="card-arrow">→</span></div>
+      </div>
+
+      <!-- I-SQUARED -->
+      <div class="company-card card-is reveal d3" onclick="window.open('https://www.instagram.com/isquaredco/','_blank')" style="background:#ffffff;padding:48px 44px;display:flex;flex-direction:column;gap:24px;position:relative;overflow:hidden;cursor:pointer;">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;">
+          <span style="font-size:11px;letter-spacing:0.16em;color:rgba(0,0,0,0.2);">03</span>
+          <span style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;padding:4px 10px;border:1px solid rgba(0,0,0,0.2);color:#8a8780;">Fall / Winter 2026</span>
+        </div>
+        <div>
+          <p style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8780;margin-bottom:10px;">Fashion Brand</p>
+          <h3 style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:38px;line-height:1;color:#1a1a1a;">I-Squared</h3>
+        </div>
+        <p style="font-size:14px;line-height:1.8;color:#8a8780;padding-top:20px;border-top:1px solid rgba(0,0,0,0.06);">A fashion brand launching Fall/Winter 2026. Rooted in identity and intentional design, I-Squared is built for those who wear what they mean. More details coming at launch.</p>
+        <div style="display:flex;align-items:center;gap:8px;margin-top:auto;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(0,0,0,0.3);">Follow on Instagram <span class="card-arrow">→</span></div>
+      </div>
+
+      <!-- Coilab Beauty -->
+      <div class="company-card card-cb reveal d4" onclick="window.open('https://www.instagram.com/coilabbeauty/','_blank')" style="background:#ffffff;padding:48px 44px;display:flex;flex-direction:column;gap:24px;position:relative;overflow:hidden;cursor:pointer;">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;">
+          <span style="font-size:11px;letter-spacing:0.16em;color:rgba(0,0,0,0.2);">04</span>
+          <span style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;padding:4px 10px;border:1px solid #1a4d35;color:#1a4d35;">Active</span>
+        </div>
+        <div>
+          <p style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#1a4d35;margin-bottom:10px;">Hair Salon &amp; Beauty Products</p>
+          <h3 style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:38px;line-height:1;color:#1a1a1a;">Coilab<br>Beauty</h3>
+        </div>
+        <p style="font-size:14px;line-height:1.8;color:#8a8780;padding-top:20px;border-top:1px solid rgba(0,0,0,0.06);">A hair salon evolving into a full product line — wigs, braiding hair, and beyond. Coilab Beauty is where craft meets commerce, built for the community it serves.</p>
+        <div style="display:flex;align-items:center;gap:8px;margin-top:auto;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(0,0,0,0.3);">Follow on Instagram <span class="card-arrow">→</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- VISION BAND -->
+<section style="background:#1a4d35;position:relative;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,rgba(255,255,255,0.1),#c9a84c,rgba(255,255,255,0.1));"></div>
+  <div style="max-width:1200px;margin:0 auto;padding:100px 60px;text-align:center;">
+    <p class="reveal" style="font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:28px;">Our philosophy</p>
+    <blockquote class="reveal d1" style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-size:clamp(28px,4.5vw,56px);line-height:1.2;color:#fafaf8;max-width:860px;margin:0 auto 16px;">"We don't build brands. We build <em style="font-style:italic;color:#c9a84c;">what brands become.</em>"</blockquote>
+    <p class="reveal d2" style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.4);">Nexxcentric Group</p>
+  </div>
+</section>
+
+<!-- STATS -->
+<section style="background:#fafaf8;">
+  <div style="max-width:1200px;margin:0 auto;padding:80px 60px;">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(0,0,0,0.06);">
+      <div class="reveal" style="background:#fafaf8;padding:48px 36px;text-align:center;">
+        <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:56px;font-weight:300;color:#1a1a1a;line-height:1;margin-bottom:8px;">4</p>
+        <p style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#8a8780;">Companies</p>
+      </div>
+      <div class="reveal d1" style="background:#fafaf8;padding:48px 36px;text-align:center;">
+        <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:56px;font-weight:300;color:#1a1a1a;line-height:1;margin-bottom:8px;">2</p>
+        <p style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#8a8780;">Active Now</p>
+      </div>
+      <div class="reveal d2" style="background:#fafaf8;padding:48px 36px;text-align:center;">
+        <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:56px;font-weight:300;color:#1a4d35;line-height:1;margin-bottom:8px;">'26</p>
+        <p style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#8a8780;">Next Launch</p>
+      </div>
+      <div class="reveal d3" style="background:#fafaf8;padding:48px 36px;text-align:center;">
+        <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:56px;font-weight:300;color:#c9a84c;line-height:1;margin-bottom:8px;">1</p>
+        <p style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#8a8780;">Vision</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:#ffffff;">
+  <div style="max-width:1200px;margin:0 auto;padding:100px 60px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+      <div class="reveal">
+        <p style="font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:#1a4d35;margin-bottom:20px;">Work with us</p>
+        <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-size:52px;line-height:1.05;color:#1a1a1a;">Let's build<br><em style="font-style:italic;color:#1a4d35;">something<br>that lasts.</em></h2>
+      </div>
+      <div class="reveal d2" style="display:flex;flex-direction:column;gap:20px;">
+        <p style="font-size:15px;line-height:1.85;color:#8a8780;">Partnership enquiries, press, investment conversations, or general correspondence — we'd like to hear from you.</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+          <a href="contact.html" class="btn-primary" style="display:inline-flex;align-items:center;gap:10px;padding:16px 32px;background:#1a4d35;color:#ffffff;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;transition:background 0.25s,color 0.25s;">Get in Touch →</a>
+          <a href="about.html" class="btn-outline" style="display:inline-flex;align-items:center;gap:10px;padding:16px 32px;border:1px solid rgba(0,0,0,0.15);color:#1a1a1a;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;transition:background 0.25s,color 0.25s;">Our Story</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#1a1a1a;position:relative;">
+  <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,#1a4d35,#c9a84c,#1a4d35);"></div>
+  <div class="footer-inner" style="max-width:1200px;margin:0 auto;padding:52px 60px;display:flex;align-items:center;justify-content:space-between;">
+    <div style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:16px;letter-spacing:0.12em;text-transform:uppercase;color:#8a8780;">Nexxcentric<span style="color:#1a4d35;">.</span>Group</div>
+    <ul class="footer-nav" style="display:flex;gap:32px;list-style:none;">
+      <li><a href="index.html" class="footer-nav-link" style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8a8780;text-decoration:none;transition:color 0.2s;">Home</a></li>
+      <li><a href="#companies" class="footer-nav-link" style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8a8780;text-decoration:none;transition:color 0.2s;">Companies</a></li>
+      <li><a href="about.html" class="footer-nav-link" style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8a8780;text-decoration:none;transition:color 0.2s;">About</a></li>
+      <li><a href="contact.html" class="footer-nav-link" style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8a8780;text-decoration:none;transition:color 0.2s;">Contact</a></li>
+    </ul>
+    <p style="font-size:12px;color:#8a8780;letter-spacing:0.08em;">&copy; 2026 Nexxcentric Group. Jamaica.</p>
+  </div>
+</footer>
+
+<script>
+const reveals=document.querySelectorAll('.reveal');
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.1});
+reveals.forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

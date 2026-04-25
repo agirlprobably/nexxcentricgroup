@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Nexxcentric Group</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:#ffffff;color:#1a1a1a;font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.8s ease,transform 0.8s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.d1{transition-delay:0.1s;}.d2{transition-delay:0.2s;}.d3{transition-delay:0.3s;}
+.nav-link:hover{color:#1a1a1a !important;}
+.btn-primary:hover{background:#145c2e !important;}
+.footer-nav-link:hover{color:#ffffff !important;}
+.contact-card{transition:border-color 0.3s,background 0.3s;}
+.contact-card:hover{border-color:rgba(26,77,53,0.25) !important;background:#f5f3ef !important;}
+@media(max-width:900px){
+  .desktop-nav{display:none !important;}
+  .page-hero{padding:120px 24px 60px !important;}
+  .hero-title{font-size:clamp(40px,12vw,72px) !important;}
+  .contact-layout{grid-template-columns:1fr !important;padding:60px 24px !important;gap:40px !important;}
+  .contact-types{grid-template-columns:1fr !important;padding:60px 24px !important;}
+  .footer-inner{flex-direction:column !important;gap:24px !important;padding:40px 24px !important;text-align:center !important;}
+  .footer-nav{flex-wrap:wrap !important;justify-content:center !important;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav style="position:fixed;top:0;left:0;right:0;z-index:100;padding:0 60px;height:72px;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.96);border-bottom:1px solid rgba(0,0,0,0.06);backdrop-filter:blur(12px);">
+  <a href="index.html" style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:17px;letter-spacing:0.1em;text-transform:uppercase;color:#1a1a1a;text-decoration:none;">Nexxcentric<span style="color:#1a4d35;">.</span>Group</a>
+  <ul class="desktop-nav" style="display:flex;align-items:center;gap:40px;list-style:none;">
+    <li><a href="index.html#companies" class="nav-link" style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8a8780;text-decoration:none;transition:color 0.2s;">Companies</a></li>
+    <li><a href="about.html" class="nav-link" style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8a8780;text-decoration:none;transition:color 0.2s;">About</a></li>
+    <li><a href="contact.html" class="nav-link" style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#1a1a1a;text-decoration:none;transition:color 0.2s;">Contact</a></li>
+    <li><a href="contact.html" class="btn-primary" style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#ffffff;background:#1a1a1a;padding:10px 22px;text-decoration:none;transition:background 0.25s,color 0.25s;">Get in Touch</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HERO -->
+<section style="background:#1a4d35;position:relative;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,rgba(255,255,255,0.1),#c9a84c,rgba(255,255,255,0.1));"></div>
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;"></div>
+  <div class="page-hero" style="max-width:1200px;margin:0 auto;padding:160px 60px 100px;position:relative;">
+    <p style="font-size:11px;letter-spacing:0.24em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:24px;opacity:0;animation:fadeUp 0.7s ease 0.2s forwards;">Get in Touch</p>
+    <h1 class="hero-title" style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-size:clamp(44px,6vw,88px);line-height:0.95;letter-spacing:-0.02em;color:#fafaf8;max-width:680px;opacity:0;animation:fadeUp 0.9s ease 0.35s forwards;">Let's build<br><em style="font-style:italic;color:#c9a84c;">something<br>that lasts.</em></h1>
+  </div>
+</section>
+
+<!-- CONTACT LAYOUT -->
+<section>
+  <div class="contact-layout" style="max-width:1200px;margin:0 auto;padding:100px 60px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;">
+
+    <!-- Left — Info -->
+    <div class="reveal">
+      <p style="font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:#1a4d35;margin-bottom:20px;">Reach us</p>
+      <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-size:44px;line-height:1.05;color:#1a1a1a;margin-bottom:32px;">We'd like to<br><em style="font-style:italic;color:#1a4d35;">hear from you.</em></h2>
+      <div style="width:40px;height:2px;background:#c9a84c;margin-bottom:36px;"></div>
+      <p style="font-size:15px;line-height:1.9;color:#8a8780;margin-bottom:48px;">Whether you're a potential partner, a member of the press, interested in investment conversations, or simply want to know more about what the group is building — we're reachable.</p>
+
+      <div style="display:flex;flex-direction:column;gap:24px;">
+        <div style="display:flex;gap:20px;align-items:flex-start;padding:24px;border:1px solid rgba(0,0,0,0.08);">
+          <div style="width:36px;height:36px;background:#1a4d35;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <p style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8a8780;margin-bottom:6px;">General Enquiries</p>
+            <p style="font-size:14px;color:#1a1a1a;">Use the contact form and we'll respond within 2 business days.</p>
+          </div>
+        </div>
+        <div style="display:flex;gap:20px;align-items:flex-start;padding:24px;border:1px solid rgba(0,0,0,0.08);">
+          <div style="width:36px;height:36px;background:#c9a84c;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <p style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8a8780;margin-bottom:6px;">Based In</p>
+            <p style="font-size:14px;color:#1a1a1a;">Jamaica · Caribbean · Globally accessible</p>
+          </div>
+        </div>
+        <div style="display:flex;gap:20px;align-items:flex-start;padding:24px;border:1px solid rgba(0,0,0,0.08);">
+          <div style="width:36px;height:36px;background:#1a1a1a;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.6a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 3h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 10a16 16 0 0 0 5.91 5.91l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <p style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8a8780;margin-bottom:6px;">Nexxcentric Agency</p>
+            <p style="font-size:14px;color:#1a1a1a;">For agency services, visit <a href="https://nexxcentric.com" target="_blank" style="color:#1a4d35;text-decoration:none;">nexxcentric.com</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right — Form -->
+    <div class="reveal d2">
+      <div style="background:#fafaf8;padding:48px 44px;border-top:2px solid #1a4d35;">
+        <p style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#8a8780;margin-bottom:32px;">Send a message</p>
+        <iframe src="https://forms.gle/KUNyz9bsrPUPh2oFA" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0" style="border:none;display:block;">Loading form...</iframe>
+        <p style="font-size:12px;color:#8a8780;margin-top:16px;text-align:center;">Having trouble with the form? <a href="https://forms.gle/KUNyz9bsrPUPh2oFA" target="_blank" style="color:#1a4d35;text-decoration:none;">Open directly →</a></p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT TYPES -->
+<section style="background:#fafaf8;">
+  <div class="contact-types" style="max-width:1200px;margin:0 auto;padding:80px 60px;">
+    <p class="reveal" style="font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:#1a4d35;margin-bottom:40px;">What to expect</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(0,0,0,0.06);">
+      <div class="contact-card reveal d1" style="background:#fafaf8;padding:36px 32px;border:1px solid transparent;transition:border-color 0.3s,background 0.3s;">
+        <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:32px;font-weight:300;color:#1a4d35;line-height:1;margin-bottom:16px;">Partnership</p>
+        <p style="font-size:13px;color:#8a8780;line-height:1.75;">Strategic partnerships, co-ventures, or collaboration across any company in the group. Tell us what you're building.</p>
+      </div>
+      <div class="contact-card reveal d2" style="background:#fafaf8;padding:36px 32px;border:1px solid transparent;transition:border-color 0.3s,background 0.3s;">
+        <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:32px;font-weight:300;color:#c9a84c;line-height:1;margin-bottom:16px;">Press</p>
+        <p style="font-size:13px;color:#8a8780;line-height:1.75;">Media enquiries, interviews, features, or editorial coverage. We're happy to speak to the work and the vision behind the group.</p>
+      </div>
+      <div class="contact-card reveal d3" style="background:#fafaf8;padding:36px 32px;border:1px solid transparent;transition:border-color 0.3s,background 0.3s;">
+        <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:32px;font-weight:300;color:#1a1a1a;line-height:1;margin-bottom:16px;">General</p>
+        <p style="font-size:13px;color:#8a8780;line-height:1.75;">Questions about the group, its companies, or anything else. We read everything and respond to what's relevant.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#1a1a1a;position:relative;">
+  <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,#1a4d35,#c9a84c,#1a4d35);"></div>
+  <div class="footer-inner" style="max-width:1200px;margin:0 auto;padding:52px 60px;display:flex;align-items:center;justify-content:space-between;">
+    <div style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:16px;letter-spacing:0.12em;text-transform:uppercase;color:#8a8780;">Nexxcentric<span style="color:#1a4d35;">.</span>Group</div>
+    <ul class="footer-nav" style="display:flex;gap:32px;list-style:none;">
+      <li><a href="index.html" class="footer-nav-link" style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8a8780;text-decoration:none;transition:color 0.2s;">Home</a></li>
+      <li><a href="index.html#companies" class="footer-nav-link" style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8a8780;text-decoration:none;transition:color 0.2s;">Companies</a></li>
+      <li><a href="about.html" class="footer-nav-link" style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8a8780;text-decoration:none;transition:color 0.2s;">About</a></li>
+      <li><a href="contact.html" class="footer-nav-link" style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#ffffff;text-decoration:none;transition:color 0.2s;">Contact</a></li>
+    </ul>
+    <p style="font-size:12px;color:#8a8780;letter-spacing:0.08em;">&copy; 2026 Nexxcentric Group. Jamaica.</p>
+  </div>
+</footer>
+
+<script>
+const reveals=document.querySelectorAll('.reveal');
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.1});
+reveals.forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

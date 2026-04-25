@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Nexxcentric Group</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:#ffffff;color:#1a1a1a;font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.8s ease,transform 0.8s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.d1{transition-delay:0.1s;}.d2{transition-delay:0.2s;}.d3{transition-delay:0.3s;}.d4{transition-delay:0.4s;}
+.nav-link:hover{color:#1a1a1a !important;}
+.btn-primary:hover{background:#1a4d35 !important;color:#ffffff !important;}
+.btn-outline:hover{background:#1a1a1a !important;color:#ffffff !important;}
+.footer-nav-link:hover{color:#ffffff !important;}
+.value-card{transition:border-color 0.3s,background 0.3s;}
+.value-card:hover{border-color:rgba(26,77,53,0.3) !important;background:#fafaf8 !important;}
+@media(max-width:900px){
+  .desktop-nav{display:none !important;}
+  .page-hero{padding:120px 24px 60px !important;}
+  .hero-title{font-size:clamp(40px,12vw,72px) !important;}
+  .about-grid{grid-template-columns:1fr !important;padding:60px 24px !important;gap:40px !important;}
+  .values-grid{grid-template-columns:1fr !important;padding:60px 24px !important;}
+  .mission-inner{padding:80px 24px !important;}
+  .companies-strip{padding:60px 24px !important;}
+  .cta-grid{grid-template-columns:1fr !important;padding:60px 24px !important;gap:40px !important;}
+  .footer-inner{flex-direction:column !important;gap:24px !important;padding:40px 24px !important;text-align:center !important;}
+  .footer-nav{flex-wrap:wrap !important;justify-content:center !important;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav style="position:fixed;top:0;left:0;right:0;z-index:100;padding:0 60px;height:72px;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.96);border-bottom:1px solid rgba(0,0,0,0.06);backdrop-filter:blur(12px);">
+  <a href="index.html" style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:17px;letter-spacing:0.1em;text-transform:uppercase;color:#1a1a1a;text-decoration:none;">Nexxcentric<span style="color:#1a4d35;">.</span>Group</a>
+  <ul class="desktop-nav" style="display:flex;align-items:center;gap:40px;list-style:none;">
+    <li><a href="index.html#companies" class="nav-link" style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8a8780;text-decoration:none;transition:color 0.2s;">Companies</a></li>
+    <li><a href="about.html" class="nav-link" style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#1a1a1a;text-decoration:none;transition:color 0.2s;">About</a></li>
+    <li><a href="contact.html" class="nav-link" style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8a8780;text-decoration:none;transition:color 0.2s;">Contact</a></li>
+    <li><a href="contact.html" class="btn-primary" style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#ffffff;background:#1a1a1a;padding:10px 22px;text-decoration:none;transition:background 0.25s,color 0.25s;">Get in Touch</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HERO -->
+<section style="background:#1a4d35;position:relative;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,rgba(255,255,255,0.1),#c9a84c,rgba(255,255,255,0.1));"></div>
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;"></div>
+  <div class="page-hero" style="max-width:1200px;margin:0 auto;padding:160px 60px 100px;position:relative;">
+    <p style="font-size:11px;letter-spacing:0.24em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:24px;opacity:0;animation:fadeUp 0.7s ease 0.2s forwards;">About the Group</p>
+    <h1 class="hero-title" style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-size:clamp(44px,6vw,88px);line-height:0.95;letter-spacing:-0.02em;color:#fafaf8;max-width:700px;opacity:0;animation:fadeUp 0.9s ease 0.35s forwards;">Built in Jamaica.<br><em style="font-style:italic;color:#c9a84c;">Built for the world.</em></h1>
+  </div>
+</section>
+
+<!-- ABOUT GRID -->
+<section>
+  <div class="about-grid" style="max-width:1200px;margin:0 auto;padding:100px 60px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;">
+    <div class="reveal">
+      <p style="font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:#1a4d35;margin-bottom:20px;">Who we are</p>
+      <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-size:44px;line-height:1.1;color:#1a1a1a;margin-bottom:32px;">One group.<br><em style="font-style:italic;color:#1a4d35;">Many futures.</em></h2>
+      <div style="width:40px;height:2px;background:#c9a84c;margin-bottom:32px;"></div>
+      <p style="font-size:15px;line-height:1.9;color:#8a8780;margin-bottom:20px;">Nexxcentric Group is a Jamaican holding company building a portfolio of brands across the categories that shape how people look, live, and grow.</p>
+      <p style="font-size:15px;line-height:1.9;color:#8a8780;">Each company under the Group is built with the same standard — strategy first, quality non-negotiable, and a long view on what the brand can become. From digital services to retail to fashion to beauty, the portfolio is intentional.</p>
+    </div>
+    <div class="reveal d2">
+      <div style="background:#fafaf8;padding:48px 44px;border-left:2px solid #1a4d35;">
+        <p style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#8a8780;margin-bottom:24px;">Our standard</p>
+        <div style="display:flex;flex-direction:column;gap:20px;">
+          <div style="display:flex;gap:16px;align-items:flex-start;">
+            <span style="color:#1a4d35;font-size:18px;line-height:1;margin-top:2px;">—</span>
+            <div>
+              <p style="font-size:14px;font-weight:500;color:#1a1a1a;margin-bottom:4px;">Strategy before execution</p>
+              <p style="font-size:13px;color:#8a8780;line-height:1.7;">Every company in the portfolio is built with a clear rationale — not a trend, not a reaction.</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:16px;align-items:flex-start;">
+            <span style="color:#1a4d35;font-size:18px;line-height:1;margin-top:2px;">—</span>
+            <div>
+              <p style="font-size:14px;font-weight:500;color:#1a1a1a;margin-bottom:4px;">Caribbean first, globally ready</p>
+              <p style="font-size:13px;color:#8a8780;line-height:1.7;">Each brand is built to serve the region it knows best while operating at a global standard.</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:16px;align-items:flex-start;">
+            <span style="color:#1a4d35;font-size:18px;line-height:1;margin-top:2px;">—</span>
+            <div>
+              <p style="font-size:14px;font-weight:500;color:#1a1a1a;margin-bottom:4px;">Quality is non-negotiable</p>
+              <p style="font-size:13px;color:#8a8780;line-height:1.7;">Across every vertical, the output reflects a commitment to doing the work properly.</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:16px;align-items:flex-start;">
+            <span style="color:#1a4d35;font-size:18px;line-height:1;margin-top:2px;">—</span>
+            <div>
+              <p style="font-size:14px;font-weight:500;color:#1a1a1a;margin-bottom:4px;">Long-term thinking</p>
+              <p style="font-size:13px;color:#8a8780;line-height:1.7;">We build for what the brand becomes — not just what it needs today.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div style="height:1px;background:linear-gradient(to right,transparent,rgba(0,0,0,0.08),transparent);margin:0 60px;"></div>
+
+<!-- VALUES -->
+<section style="background:#fafaf8;">
+  <div class="values-grid" style="max-width:1200px;margin:0 auto;padding:100px 60px;">
+    <div class="reveal" style="margin-bottom:56px;">
+      <p style="font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:#1a4d35;margin-bottom:14px;">What we stand for</p>
+      <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-size:48px;line-height:1;color:#1a1a1a;">The principles<br><em style="font-style:italic;color:#1a4d35;">behind the portfolio.</em></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(0,0,0,0.06);">
+      <div class="value-card reveal d1" style="background:#fafaf8;padding:40px 36px;border:1px solid transparent;transition:border-color 0.3s,background 0.3s;">
+        <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:48px;font-weight:300;color:rgba(26,77,53,0.15);line-height:1;margin-bottom:20px;">01</p>
+        <p style="font-size:14px;font-weight:500;color:#1a1a1a;margin-bottom:10px;letter-spacing:0.02em;">Diagnose before prescribing</p>
+        <p style="font-size:13px;color:#8a8780;line-height:1.75;">We don't recommend before we understand. Every engagement starts with honest assessment — not a predetermined solution.</p>
+      </div>
+      <div class="value-card reveal d2" style="background:#fafaf8;padding:40px 36px;border:1px solid transparent;">
+        <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:48px;font-weight:300;color:rgba(201,168,76,0.2);line-height:1;margin-bottom:20px;">02</p>
+        <p style="font-size:14px;font-weight:500;color:#1a1a1a;margin-bottom:10px;letter-spacing:0.02em;">Caribbean excellence</p>
+        <p style="font-size:13px;color:#8a8780;line-height:1.75;">Built in Jamaica, operating at a global standard. The region has always had the talent. We're building the infrastructure to match.</p>
+      </div>
+      <div class="value-card reveal d3" style="background:#fafaf8;padding:40px 36px;border:1px solid transparent;">
+        <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:48px;font-weight:300;color:rgba(26,77,53,0.15);line-height:1;margin-bottom:20px;">03</p>
+        <p style="font-size:14px;font-weight:500;color:#1a1a1a;margin-bottom:10px;letter-spacing:0.02em;">Built to last</p>
+        <p style="font-size:13px;color:#8a8780;line-height:1.75;">Every brand in the portfolio is built for longevity — not a moment, not a trend. Strategy, identity, and execution that compounds over time.</p>
+      </div>
+      <div class="value-card reveal d1" style="background:#fafaf8;padding:40px 36px;border:1px solid transparent;">
+        <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:48px;font-weight:300;color:rgba(201,168,76,0.2);line-height:1;margin-bottom:20px;">04</p>
+        <p style="font-size:14px;font-weight:500;color:#1a1a1a;margin-bottom:10px;letter-spacing:0.02em;">Human creativity first</p>
+        <p style="font-size:13px;color:#8a8780;line-height:1.75;">Technology is a tool. Strategy and creativity are the work. Every company in the group is led by human thinking, not automated shortcuts.</p>
+      </div>
+      <div class="value-card reveal d2" style="background:#fafaf8;padding:40px 36px;border:1px solid transparent;">
+        <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:48px;font-weight:300;color:rgba(26,77,53,0.15);line-height:1;margin-bottom:20px;">05</p>
+        <p style="font-size:14px;font-weight:500;color:#1a1a1a;margin-bottom:10px;letter-spacing:0.02em;">One standard, every brand</p>
+        <p style="font-size:13px;color:#8a8780;line-height:1.75;">Across all four companies — strategy, quality, and execution meet the same bar. The name on the door changes. The standard doesn't.</p>
+      </div>
+      <div class="value-card reveal d3" style="background:#fafaf8;padding:40px 36px;border:1px solid transparent;">
+        <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:48px;font-weight:300;color:rgba(201,168,76,0.2);line-height:1;margin-bottom:20px;">06</p>
+        <p style="font-size:14px;font-weight:500;color:#1a1a1a;margin-bottom:10px;letter-spacing:0.02em;">Equity through access</p>
+        <p style="font-size:13px;color:#8a8780;line-height:1.75;">Premium positioning doesn't mean inaccessible. Each brand is built to serve its market with the quality it deserves — at every price point.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPANIES STRIP -->
+<section style="background:#ffffff;">
+  <div class="companies-strip" style="max-width:1200px;margin:0 auto;padding:100px 60px;">
+    <div class="reveal" style="margin-bottom:56px;">
+      <p style="font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:#1a4d35;margin-bottom:14px;">The Portfolio</p>
+      <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-size:48px;line-height:1;color:#1a1a1a;">Four companies.<br><em style="font-style:italic;color:#1a4d35;">One vision.</em></h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:1px;background:rgba(0,0,0,0.06);">
+      <div class="reveal" style="background:#ffffff;padding:32px 40px;display:grid;grid-template-columns:80px 1fr 200px 120px;align-items:center;gap:32px;">
+        <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:32px;font-weight:300;color:rgba(0,0,0,0.1);">01</p>
+        <div>
+          <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:24px;font-weight:400;color:#1a1a1a;margin-bottom:4px;">Nexxcentric</p>
+          <p style="font-size:12px;color:#8a8780;letter-spacing:0.06em;">Strategy &amp; Digital Agency</p>
+        </div>
+        <p style="font-size:13px;color:#8a8780;line-height:1.6;">Branding, web, marketing, social, AI systems.</p>
+        <a href="https://nexxcentric.com" target="_blank" style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#1a4d35;text-decoration:none;text-align:right;">Visit →</a>
+      </div>
+      <div class="reveal d1" style="background:#ffffff;padding:32px 40px;display:grid;grid-template-columns:80px 1fr 200px 120px;align-items:center;gap:32px;">
+        <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:32px;font-weight:300;color:rgba(0,0,0,0.1);">02</p>
+        <div>
+          <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:24px;font-weight:400;color:#1a1a1a;margin-bottom:4px;">DEPVIA</p>
+          <p style="font-size:12px;color:#8a8780;letter-spacing:0.06em;">Lifestyle Retail Marketplace</p>
+        </div>
+        <p style="font-size:13px;color:#8a8780;line-height:1.6;">Jamaica + Caribbean lifestyle retail.</p>
+        <a href="https://shopdepvia.com" target="_blank" style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#c9a84c;text-decoration:none;text-align:right;">Visit →</a>
+      </div>
+      <div class="reveal d2" style="background:#ffffff;padding:32px 40px;display:grid;grid-template-columns:80px 1fr 200px 120px;align-items:center;gap:32px;">
+        <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:32px;font-weight:300;color:rgba(0,0,0,0.1);">03</p>
+        <div>
+          <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:24px;font-weight:400;color:#1a1a1a;margin-bottom:4px;">I-Squared</p>
+          <p style="font-size:12px;color:#8a8780;letter-spacing:0.06em;">Fashion Brand — FW 2026</p>
+        </div>
+        <p style="font-size:13px;color:#8a8780;line-height:1.6;">Identity-led fashion. Launching Fall/Winter 2026.</p>
+        <a href="https://www.instagram.com/isquaredco/" target="_blank" style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#8a8780;text-decoration:none;text-align:right;">Follow →</a>
+      </div>
+      <div class="reveal d3" style="background:#ffffff;padding:32px 40px;display:grid;grid-template-columns:80px 1fr 200px 120px;align-items:center;gap:32px;">
+        <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:32px;font-weight:300;color:rgba(0,0,0,0.1);">04</p>
+        <div>
+          <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:24px;font-weight:400;color:#1a1a1a;margin-bottom:4px;">Coilab Beauty</p>
+          <p style="font-size:12px;color:#8a8780;letter-spacing:0.06em;">Hair Salon &amp; Beauty Products</p>
+        </div>
+        <p style="font-size:13px;color:#8a8780;line-height:1.6;">Salon services + wigs, braiding hair, and more.</p>
+        <a href="https://www.instagram.com/coilabbeauty/" target="_blank" style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#1a4d35;text-decoration:none;text-align:right;">Follow →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:#1a4d35;position:relative;">
+  <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,rgba(255,255,255,0.1),#c9a84c,rgba(255,255,255,0.1));"></div>
+  <div class="cta-grid" style="max-width:1200px;margin:0 auto;padding:100px 60px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+    <div class="reveal">
+      <p style="font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:#c9a84c;margin-bottom:20px;">Get in touch</p>
+      <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-size:48px;line-height:1.05;color:#fafaf8;">Partnership.<br><em style="font-style:italic;color:#c9a84c;">Press. Investment.</em></h2>
+    </div>
+    <div class="reveal d2" style="display:flex;flex-direction:column;gap:20px;">
+      <p style="font-size:15px;line-height:1.85;color:rgba(255,255,255,0.6);">We'd like to hear from you — whether you're a potential partner, member of the press, or interested in what the group is building.</p>
+      <a href="contact.html" class="btn-primary" style="display:inline-flex;align-items:center;gap:10px;padding:16px 32px;background:#c9a84c;color:#1a1a1a;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;transition:background 0.25s,color 0.25s;width:fit-content;">Send a Message →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#1a1a1a;border-top:1px solid rgba(255,255,255,0.05);position:relative;">
+  <div class="footer-inner" style="max-width:1200px;margin:0 auto;padding:52px 60px;display:flex;align-items:center;justify-content:space-between;">
+    <div style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:16px;letter-spacing:0.12em;text-transform:uppercase;color:#8a8780;">Nexxcentric<span style="color:#1a4d35;">.</span>Group</div>
+    <ul class="footer-nav" style="display:flex;gap:32px;list-style:none;">
+      <li><a href="index.html" class="footer-nav-link" style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8a8780;text-decoration:none;transition:color 0.2s;">Home</a></li>
+      <li><a href="index.html#companies" class="footer-nav-link" style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8a8780;text-decoration:none;transition:color 0.2s;">Companies</a></li>
+      <li><a href="about.html" class="footer-nav-link" style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#ffffff;text-decoration:none;transition:color 0.2s;">About</a></li>
+      <li><a href="contact.html" class="footer-nav-link" style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8a8780;text-decoration:none;transition:color 0.2s;">Contact</a></li>
+    </ul>
+    <p style="font-size:12px;color:#8a8780;letter-spacing:0.08em;">&copy; 2026 Nexxcentric Group. Jamaica.</p>
+  </div>
+</footer>
+
+<script>
+const reveals=document.querySelectorAll('.reveal');
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.1});
+reveals.forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
